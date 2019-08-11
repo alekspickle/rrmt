@@ -9,7 +9,7 @@ const Header: React.FC<IProps> = (props: IProps) => (
 );
 
 Header.defaultProps = {
-  name: 'world',
+  name: 'peasant',
 };
 
 export default Header;

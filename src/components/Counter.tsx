@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { observer} from 'mobx-react';
 
 interface IProps {
   countBy?: number;
@@ -7,8 +8,8 @@ interface IProps {
 interface IState {
   count: number;
 }
-
-class Description extends React.Component<IProps, IState> {
+@observer
+class Counter extends React.Component<IProps, IState> {
   public static defaultProps: Partial<IProps> = {
     countBy: 1,
   };
@@ -26,11 +27,11 @@ class Description extends React.Component<IProps, IState> {
   public render() {
     return (
       <div>
-        <p>My favorite number is {this.state.count}</p>
+        <p>My number is {this.state.count}</p>
         <button onClick={this.increase}>Increase</button>
       </div>
     );
   }
 }
 
-export default Description;
+export default Counter;

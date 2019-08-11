@@ -1,24 +1,27 @@
 {
-  "name": "trust-example",
+  "name": "rrmt",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@types/jest": "24.0.17",
-    "@types/node": "12.7.1",
-    "@types/react": "16.8.25",
-    "@types/react-dom": "16.8.5",
-    "mobx": "^5.13.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "rxjs": "^6.5.2",
-    "typescript": "3.5.3"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html",
+    "types": "tsc --noEmit --watch"
+  },
+  "dependencies": {
+    "mobx": "^5.13.0",
+    "mobx-react-lite": "^1.4.1",
+    "mobx-utils": "^5.4.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2",
+    "store": "^2.0.12"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.2",
+    "parcel": "^1.12.3",
+    "typescript": "^3.5.3"
   },
   "eslintConfig": {
     "extends": "react-app"
